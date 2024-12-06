@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+Articles
+{% endblock %}
+{% block name %}
+{% for i in a %}
+<div class="card">
+    <div class="card1">
+        <img src="{{ i.image }}" alt="">
+    </div>
+        <div class="card2">
+        <h2>{{i.id}}){{i.title}}</h2>
+        <p class="p1">{{i.description}}</p>
+        <button><a href="{% url 'nextpage' i.id %}" class="a1">readmore..</a></button>
+
+
+        </div>
+    </div>
+    {% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}
+audio
+{% endblock %}
+{% block name %}
+<audio src="{{path}}" controls></audio>
+<a href="{% url 'home'  %}"><button style="background-color:blue;height: 40px;width: 90px; border: none;color: white;margin-top: 30px;border-radius: 20px;">stop</button></a>
+{% endblock %}
